@@ -5,6 +5,8 @@ import AddToCalendar from './AddToCalendar';
 import type { SerializableHoliday, Locale } from '@/lib/types';
 import { formatDate } from '@/lib/formatting';
 import { getDictionary, t } from '@/lib/i18n';
+import DealsSection from './DealsSection';
+import type { DealFile } from '@/lib/deals/types';
 
 interface HolidayPageProps {
   holiday: SerializableHoliday;
@@ -15,6 +17,7 @@ interface HolidayPageProps {
   countrySlug?: string;
   countryName?: string;
   countryFlag?: string;
+  dealFile?: DealFile | null;
   extraContent?: React.ReactNode;
 }
 
@@ -27,6 +30,7 @@ export default function HolidayPage({
   countrySlug,
   countryName,
   countryFlag,
+  dealFile,
   extraContent,
 }: HolidayPageProps) {
   const dict = getDictionary(locale);
@@ -79,6 +83,11 @@ export default function HolidayPage({
       <section className="mb-8">
         <AddToCalendar holiday={holiday} date={targetDate} locale={locale} />
       </section>
+
+      {/* Deals */}
+      {dealFile && (
+        <DealsSection dealFile={dealFile} holidayName={name} locale={locale} />
+      )}
 
       {/* Extra content */}
       {extraContent}

@@ -12,6 +12,7 @@ import { getDictionary, t } from '@/lib/i18n';
 import { formatDate } from '@/lib/formatting';
 import { buildHolidayUrl, buildHolidayHreflang, buildAbsoluteUrl } from '@/lib/url';
 import HolidayPageComponent from '@/components/HolidayPage';
+import { getDealsByHoliday } from '@/data/deals';
 
 interface HolidayDetailProps {
   countrySlug: string;
@@ -72,6 +73,7 @@ export function HolidayDetail({ countrySlug, holidaySlug, locale }: HolidayDetai
   if (!holiday) return null;
 
   const { date, year } = getNextHolidayDate(holiday);
+  const dealFile = getDealsByHoliday(holiday.id);
   const dateForSchema = getHolidayDate(holiday, year);
   const dateStr = dateForSchema.toISOString().split('T')[0];
 
@@ -140,6 +142,7 @@ export function HolidayDetail({ countrySlug, holidaySlug, locale }: HolidayDetai
         countrySlug={countrySlug}
         countryName={country.names[locale]}
         countryFlag={country.flag}
+        dealFile={dealFile}
       />
     </>
   );
