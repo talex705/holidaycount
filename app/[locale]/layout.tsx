@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import { isValidLocale, getDictionary } from '@/lib/i18n';
 import type { Locale } from '@/lib/types';
+import { getUpcomingHolidays } from '@/data/holidays';
+import { getCountryByCode } from '@/data/countries';
+import HolidayPicker from '@/components/HolidayPicker';
 
 export function generateStaticParams() {
   return [{ locale: 'fr' }, { locale: 'es' }];
@@ -33,6 +36,19 @@ export default async function LocaleLayout({
 function Header({ locale, dict, prefix }: { locale: Locale; dict: Record<string, string>; prefix: string }) {
   const langLabel = locale.toUpperCase();
 
+  const upcoming = getUpcomingHolidays(8).map((item) => {
+    const country = getCountryByCode(item.holiday.countryCode);
+    const now = new Date();
+    const daysUntil = Math.ceil((item.date.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    return {
+      holiday: { names: item.holiday.names, icon: item.holiday.icon, slugs: item.holiday.slugs },
+      date: item.date,
+      countrySlug: country?.slugs[locale] || '',
+      countryFlag: country?.flag || '',
+      daysUntil,
+    };
+  });
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,6 +72,7 @@ function Header({ locale, dict, prefix }: { locale: Locale; dict: Record<string,
             <a href={`${prefix}/about`} className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors">
               {dict['nav.about']}
             </a>
+            <HolidayPicker holidays={upcoming} label={dict['deals.navLabel']} locale={locale} prefix={prefix} />
           </div>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1 text-sm">
@@ -118,6 +135,7 @@ function Footer({ locale, dict, prefix }: { locale: Locale; dict: Record<string,
           <div className="flex gap-6">
             <a href={`${prefix}/privacy-policy`} className="hover:text-gray-600 transition-colors">{dict['nav.privacyPolicy']}</a>
             <a href={`${prefix}/about`} className="hover:text-gray-600 transition-colors">{dict['nav.about']}</a>
+            <a href={`${prefix}/affiliate-disclosure`} className="hover:text-gray-600 transition-colors">{dict['nav.affiliateDisclosure']}</a>
           </div>
         </div>
       </div>

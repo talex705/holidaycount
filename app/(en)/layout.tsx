@@ -1,4 +1,7 @@
 import { getDictionary } from '@/lib/i18n';
+import { getUpcomingHolidays } from '@/data/holidays';
+import { getCountryByCode } from '@/data/countries';
+import HolidayPicker from '@/components/HolidayPicker';
 
 const dict = getDictionary('en');
 
@@ -17,6 +20,19 @@ export default function EnglishLayout({
 }
 
 function Header() {
+  const upcoming = getUpcomingHolidays(8).map((item) => {
+    const country = getCountryByCode(item.holiday.countryCode);
+    const now = new Date();
+    const daysUntil = Math.ceil((item.date.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    return {
+      holiday: { names: item.holiday.names, icon: item.holiday.icon, slugs: item.holiday.slugs },
+      date: item.date,
+      countrySlug: country?.slugs.en || '',
+      countryFlag: country?.flag || '',
+      daysUntil,
+    };
+  });
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,6 +47,7 @@ function Header() {
             <a href="/france" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors">France</a>
             <a href="/mexico" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors">Mexico</a>
             <a href="/about" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors">About</a>
+            <HolidayPicker holidays={upcoming} label="Deals" locale="en" prefix="" />
           </div>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
@@ -85,6 +102,7 @@ function Footer() {
           <div className="flex gap-6">
             <a href="/privacy-policy" className="hover:text-gray-600 transition-colors">{dict['nav.privacyPolicy']}</a>
             <a href="/about" className="hover:text-gray-600 transition-colors">{dict['nav.about']}</a>
+            <a href="/affiliate-disclosure" className="hover:text-gray-600 transition-colors">Affiliate Disclosure</a>
           </div>
         </div>
       </div>
