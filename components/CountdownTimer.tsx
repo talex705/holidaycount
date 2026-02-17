@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import type { Locale } from '@/lib/types';
 
 interface CountdownTimerProps {
   targetDate: Date;
   holidayName: string;
   size: 'large' | 'small';
+  locale?: Locale;
 }
 
 interface TimeLeft {
@@ -16,9 +18,14 @@ interface TimeLeft {
   total: number;
 }
 
+const LABELS: Record<Locale, { days: string; hours: string; minutes: string; seconds: string; happy: string; enjoy: string; today: string; loading: string }> = {
+  en: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds', happy: 'Happy', enjoy: 'Enjoy celebrating today!', today: 'Today!', loading: 'Loading...' },
+  fr: { days: 'Jours', hours: 'Heures', minutes: 'Minutes', seconds: 'Secondes', happy: 'Joyeux', enjoy: 'Profitez de cette journée de fête !', today: "Aujourd'hui !", loading: 'Chargement...' },
+  es: { days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos', happy: '¡Feliz', enjoy: '¡Disfruta la celebración de hoy!', today: '¡Hoy!', loading: 'Cargando...' },
+};
+
 function calculateTimeLeft(target: Date): TimeLeft {
   const now = new Date();
-  // Target is end of day (23:59:59) so the holiday shows "today" all day
   const end = new Date(target);
   end.setHours(23, 59, 59, 999);
   const total = end.getTime() - now.getTime();
@@ -45,9 +52,10 @@ function isToday(date: Date): boolean {
   );
 }
 
-export default function CountdownTimer({ targetDate, holidayName, size }: CountdownTimerProps) {
+export default function CountdownTimer({ targetDate, holidayName, size, locale = 'en' }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calculateTimeLeft(targetDate));
   const [mounted, setMounted] = useState(false);
+  const l = LABELS[locale];
 
   useEffect(() => {
     setMounted(true);
@@ -60,13 +68,12 @@ export default function CountdownTimer({ targetDate, holidayName, size }: Countd
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  // SSR-safe: show static placeholder until hydrated
   if (!mounted) {
     if (size === 'large') {
       return (
         <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 lg:p-10">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-            {['Days', 'Hours', 'Minutes', 'Seconds'].map((label) => (
+            {[l.days, l.hours, l.minutes, l.seconds].map((label) => (
               <div key={label} className="text-center">
                 <div className="countdown-digit text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                   --
@@ -81,32 +88,30 @@ export default function CountdownTimer({ targetDate, holidayName, size }: Countd
       );
     }
     return (
-      <span className="text-sm text-gray-500 countdown-digit">Loading...</span>
+      <span className="text-sm text-gray-500 countdown-digit">{l.loading}</span>
     );
   }
 
-  // Holiday is today
   if (isToday(targetDate)) {
     if (size === 'large') {
       return (
         <div className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl p-6 sm:p-8 lg:p-10 text-center">
           <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
-            Happy {holidayName}!
+            {locale === 'es' ? `${l.happy} ${holidayName}!` : `${l.happy} ${holidayName}!`}
           </p>
           <p className="text-primary-100 mt-2 text-base sm:text-lg">
-            Enjoy celebrating today!
+            {l.enjoy}
           </p>
         </div>
       );
     }
     return (
       <span className="text-sm font-semibold text-primary-600">
-        Today!
+        {l.today}
       </span>
     );
   }
 
-  // Small/card format
   if (size === 'small') {
     if (timeLeft.days === 0) {
       return (
@@ -122,12 +127,11 @@ export default function CountdownTimer({ targetDate, holidayName, size }: Countd
     );
   }
 
-  // Large/hero format
   const digits = [
-    { value: timeLeft.days, label: 'Days' },
-    { value: timeLeft.hours, label: 'Hours' },
-    { value: timeLeft.minutes, label: 'Minutes' },
-    { value: timeLeft.seconds, label: 'Seconds' },
+    { value: timeLeft.days, label: l.days },
+    { value: timeLeft.hours, label: l.hours },
+    { value: timeLeft.minutes, label: l.minutes },
+    { value: timeLeft.seconds, label: l.seconds },
   ];
 
   return (

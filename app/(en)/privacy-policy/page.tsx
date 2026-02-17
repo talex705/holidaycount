@@ -32,31 +32,23 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-xl font-semibold text-gray-900">Information We Collect</h2>
         <p>
           <strong>Countdown timers:</strong> All countdown calculations are performed entirely in
-          your browser. We do not collect, transmit, or store any personal data. The timers are
-          purely client-side JavaScript running on your device.
+          your browser. We do not collect, transmit, or store any personal data.
         </p>
         <p>
           <strong>Analytics data:</strong> We use Google Analytics 4 (GA4) to collect anonymous
           usage data, including pages visited, time on site, device type, browser type, and
-          general geographic region. This data does not identify you personally.
+          general geographic region.
         </p>
         <p>
           <strong>Local storage:</strong> We may use your browser&apos;s localStorage to remember
-          preferences such as country filter (US, Canada, or both) for a better experience on
-          return visits. This data never leaves your device.
+          preferences such as language and timezone for a better experience on return visits.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900">Advertising</h2>
         <p>
           We use Google AdSense to display advertisements. Google may use cookies and web beacons
-          to serve ads based on your prior visits to this or other websites. You can opt out of
-          personalized advertising by visiting{' '}
-          <a
-            href="https://www.google.com/settings/ads"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline"
-          >
+          to serve ads based on your prior visits. You can opt out at{' '}
+          <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">
             Google&apos;s Ads Settings
           </a>.
         </p>
@@ -64,8 +56,7 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-xl font-semibold text-gray-900">Cookies</h2>
         <p>
           We use first-party cookies for analytics and third-party cookies for advertising.
-          You can control cookie preferences through your browser settings. Disabling cookies
-          will not affect the functionality of our countdown timers.
+          Disabling cookies will not affect the functionality of our countdown timers.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900">Third-Party Services</h2>
@@ -78,8 +69,7 @@ export default function PrivacyPolicyPage() {
         <h2 className="text-xl font-semibold text-gray-900">Your Rights</h2>
         <p>
           You have the right to: access your data, request deletion, opt out of analytics
-          tracking, and disable cookies. Since we do not collect personal data, there is no
-          personal data to delete from our servers.
+          tracking, and disable cookies.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900">Children&apos;s Privacy</h2>
