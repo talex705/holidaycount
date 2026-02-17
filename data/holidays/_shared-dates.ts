@@ -161,6 +161,156 @@ export function getSummerBankHoliday(year: number): Date {
 }
 
 // ---------------------------------------------------------------------------
+// Lunar / lookup-table holidays
+// ---------------------------------------------------------------------------
+
+/** Diwali dates (Hindu lunisolar calendar) — pre-calculated 2024-2035 */
+const DIWALI_DATES: Record<number, [number, number]> = {
+  2024: [11, 1], 2025: [10, 20], 2026: [11, 8], 2027: [10, 29],
+  2028: [10, 17], 2029: [11, 5], 2030: [10, 26], 2031: [11, 14],
+  2032: [11, 2], 2033: [10, 23], 2034: [11, 11], 2035: [10, 31],
+};
+
+export function getDiwaliDate(year: number): Date {
+  const d = DIWALI_DATES[year];
+  if (!d) throw new Error(`Diwali date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+/** Eid al-Fitr dates (Islamic calendar) — pre-calculated 2024-2035 */
+const EID_AL_FITR_DATES: Record<number, [number, number]> = {
+  2024: [4, 10], 2025: [3, 30], 2026: [3, 20], 2027: [3, 9],
+  2028: [2, 27], 2029: [2, 14], 2030: [2, 4], 2031: [1, 24],
+  2032: [1, 13], 2033: [1, 2], 2034: [12, 22], 2035: [12, 12],
+};
+
+export function getEidAlFitrDate(year: number): Date {
+  const d = EID_AL_FITR_DATES[year];
+  if (!d) throw new Error(`Eid al-Fitr date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+/** Eid al-Adha dates (Islamic calendar) — pre-calculated 2024-2035 */
+const EID_AL_ADHA_DATES: Record<number, [number, number]> = {
+  2024: [6, 17], 2025: [6, 6], 2026: [5, 27], 2027: [5, 16],
+  2028: [5, 4], 2029: [4, 24], 2030: [4, 13], 2031: [4, 2],
+  2032: [3, 22], 2033: [3, 11], 2034: [3, 1], 2035: [2, 18],
+};
+
+export function getEidAlAdhaDate(year: number): Date {
+  const d = EID_AL_ADHA_DATES[year];
+  if (!d) throw new Error(`Eid al-Adha date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+/** Chinese New Year dates (Chinese lunisolar calendar) — pre-calculated 2024-2035 */
+const CHINESE_NEW_YEAR_DATES: Record<number, [number, number]> = {
+  2024: [2, 10], 2025: [1, 29], 2026: [2, 17], 2027: [2, 6],
+  2028: [1, 26], 2029: [2, 13], 2030: [2, 3], 2031: [1, 23],
+  2032: [2, 11], 2033: [1, 31], 2034: [2, 19], 2035: [2, 8],
+};
+
+export function getChineseNewYear(year: number): Date {
+  const d = CHINESE_NEW_YEAR_DATES[year];
+  if (!d) throw new Error(`Chinese New Year date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+/** Holi dates (Hindu calendar) — pre-calculated 2024-2035 */
+const HOLI_DATES: Record<number, [number, number]> = {
+  2024: [3, 25], 2025: [3, 14], 2026: [3, 3], 2027: [3, 22],
+  2028: [3, 11], 2029: [3, 1], 2030: [3, 20], 2031: [3, 10],
+  2032: [2, 27], 2033: [3, 17], 2034: [3, 6], 2035: [3, 25],
+};
+
+export function getHoliDate(year: number): Date {
+  const d = HOLI_DATES[year];
+  if (!d) throw new Error(`Holi date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+/** Matariki dates (Maori New Year, NZ) — pre-calculated 2024-2035 */
+const MATARIKI_DATES: Record<number, [number, number]> = {
+  2024: [6, 28], 2025: [6, 20], 2026: [7, 10], 2027: [6, 25],
+  2028: [7, 14], 2029: [7, 6], 2030: [6, 21], 2031: [7, 11],
+  2032: [7, 2], 2033: [6, 24], 2034: [7, 7], 2035: [6, 29],
+};
+
+export function getMatarikiDate(year: number): Date {
+  const d = MATARIKI_DATES[year];
+  if (!d) throw new Error(`Matariki date not available for year ${year}`);
+  return new Date(year, d[0] - 1, d[1]);
+}
+
+// ---------------------------------------------------------------------------
+// Australia-specific
+// ---------------------------------------------------------------------------
+
+/** Queen's Birthday (AU) — second Monday of June (most states) */
+export function getQueensBirthdayAU(year: number): Date {
+  return nthWeekday(year, 6, 1, 2);
+}
+
+/** Melbourne Cup Day — first Tuesday of November */
+export function getMelbourneCup(year: number): Date {
+  return nthWeekday(year, 11, 2, 1);
+}
+
+// ---------------------------------------------------------------------------
+// New Zealand-specific
+// ---------------------------------------------------------------------------
+
+/** Queen's Birthday (NZ) — first Monday of June */
+export function getQueensBirthdayNZ(year: number): Date {
+  return nthWeekday(year, 6, 1, 1);
+}
+
+// ---------------------------------------------------------------------------
+// Ireland-specific
+// ---------------------------------------------------------------------------
+
+/** June Bank Holiday (IE) — first Monday of June */
+export function getJuneBankHolidayIE(year: number): Date {
+  return nthWeekday(year, 6, 1, 1);
+}
+
+/** October Bank Holiday (IE) — last Monday of October */
+export function getOctoberBankHolidayIE(year: number): Date {
+  return lastWeekday(year, 10, 1);
+}
+
+// ---------------------------------------------------------------------------
+// Mexico-specific
+// ---------------------------------------------------------------------------
+
+/** Benito Juárez Birthday (MX) — third Monday of March */
+export function getBenitoJuarezBirthday(year: number): Date {
+  return nthWeekday(year, 3, 1, 3);
+}
+
+// ---------------------------------------------------------------------------
+// Colombia-specific
+// ---------------------------------------------------------------------------
+
+/** Emiliani Law holidays — move to next Monday if not already Monday */
+export function nextMonday(year: number, month: number, day: number): Date {
+  const date = new Date(year, month - 1, day);
+  const dayOfWeek = date.getDay();
+  if (dayOfWeek === 1) return date;
+  const daysUntilMonday = (8 - dayOfWeek) % 7 || 7;
+  return new Date(year, month - 1, day + daysUntilMonday);
+}
+
+// ---------------------------------------------------------------------------
+// Holy Thursday (used by multiple Latin American countries)
+// ---------------------------------------------------------------------------
+
+export function getHolyThursday(year: number): Date {
+  const easter = getEasterDate(year);
+  return new Date(year, easter.getMonth(), easter.getDate() - 3);
+}
+
+// ---------------------------------------------------------------------------
 // Generic holiday date resolution
 // ---------------------------------------------------------------------------
 
