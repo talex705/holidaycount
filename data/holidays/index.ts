@@ -9,6 +9,19 @@ import usHolidays from './united-states';
 import caHolidays from './canada';
 import { SHARED_HOLIDAYS } from './shared';
 import gbHolidays from './united-kingdom';
+import ieHolidays from './ireland';
+import auHolidays from './australia';
+import nzHolidays from './new-zealand';
+import zaHolidays from './south-africa';
+import jmHolidays from './jamaica';
+import ttHolidays from './trinidad-and-tobago';
+import bbHolidays from './barbados';
+import bsHolidays from './bahamas';
+import ngHolidays from './nigeria';
+import ghHolidays from './ghana';
+import keHolidays from './kenya';
+import ugHolidays from './uganda';
+import inHolidays from './india';
 
 // ---------------------------------------------------------------------------
 // Master holiday list
@@ -19,6 +32,19 @@ const ALL_HOLIDAYS: HolidayData[] = [
   ...caHolidays,
   ...SHARED_HOLIDAYS,
   ...gbHolidays,
+  ...ieHolidays,
+  ...auHolidays,
+  ...nzHolidays,
+  ...zaHolidays,
+  ...jmHolidays,
+  ...ttHolidays,
+  ...bbHolidays,
+  ...bsHolidays,
+  ...ngHolidays,
+  ...ghHolidays,
+  ...keHolidays,
+  ...ugHolidays,
+  ...inHolidays,
 ];
 
 export default ALL_HOLIDAYS;
