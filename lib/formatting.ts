@@ -12,6 +12,7 @@ export function formatDate(date: Date, locale: Locale = 'en'): string {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   });
 }
 
@@ -20,5 +21,6 @@ export function formatDateShort(date: Date, locale: Locale = 'en'): string {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
+    timeZone: 'UTC',
   });
 }

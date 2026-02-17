@@ -26,8 +26,14 @@ const LABELS: Record<Locale, { days: string; hours: string; minutes: string; sec
 
 function calculateTimeLeft(target: Date): TimeLeft {
   const now = new Date();
-  const end = new Date(target);
-  end.setHours(23, 59, 59, 999);
+  // Reconstruct the target date in the user's local timezone using the UTC
+  // date components (the Date was created at midnight UTC during SSG build).
+  const end = new Date(
+    target.getUTCFullYear(),
+    target.getUTCMonth(),
+    target.getUTCDate(),
+    23, 59, 59, 999
+  );
   const total = end.getTime() - now.getTime();
 
   if (total <= 0) {
@@ -45,10 +51,11 @@ function calculateTimeLeft(target: Date): TimeLeft {
 
 function isToday(date: Date): boolean {
   const now = new Date();
+  // Compare the intended calendar date (UTC components) with today's local date
   return (
-    date.getFullYear() === now.getFullYear() &&
-    date.getMonth() === now.getMonth() &&
-    date.getDate() === now.getDate()
+    date.getUTCFullYear() === now.getFullYear() &&
+    date.getUTCMonth() === now.getMonth() &&
+    date.getUTCDate() === now.getDate()
   );
 }
 

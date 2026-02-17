@@ -348,17 +348,17 @@ import type { SerializableHoliday, Locale } from '@/lib/types';
 export function generateGoogleCalendarUrl(holiday: SerializableHoliday, date: Date, locale: Locale = 'en'): string {
   const name = holiday.names[locale];
   const desc = holiday.descriptions[locale];
-  const dateStr = `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}`;
+  const dateStr = `${date.getUTCFullYear()}${String(date.getUTCMonth() + 1).padStart(2, '0')}${String(date.getUTCDate()).padStart(2, '0')}`;
   const nextDay = new Date(date);
-  nextDay.setDate(nextDay.getDate() + 1);
-  const endDateStr = `${nextDay.getFullYear()}${String(nextDay.getMonth() + 1).padStart(2, '0')}${String(nextDay.getDate()).padStart(2, '0')}`;
+  nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+  const endDateStr = `${nextDay.getUTCFullYear()}${String(nextDay.getUTCMonth() + 1).padStart(2, '0')}${String(nextDay.getUTCDate()).padStart(2, '0')}`;
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(name)}&dates=${dateStr}/${endDateStr}&details=${encodeURIComponent(desc)}`;
 }
 
 export function generateICalEvent(holiday: SerializableHoliday, date: Date, locale: Locale = 'en'): string {
   const name = holiday.names[locale];
   const desc = holiday.descriptions[locale];
-  const dateStr = `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}`;
+  const dateStr = `${date.getUTCFullYear()}${String(date.getUTCMonth() + 1).padStart(2, '0')}${String(date.getUTCDate()).padStart(2, '0')}`;
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',

@@ -156,7 +156,7 @@ export default function HolidayPage({
                 .replace(/\{date\}/g, formatDate(targetDate, locale))
                 .replace(/\{dayOfWeek\}/g, targetDate.toLocaleDateString(
                   locale === 'fr' ? 'fr-FR' : locale === 'es' ? 'es-ES' : 'en-US',
-                  { weekday: 'long' }
+                  { weekday: 'long', timeZone: 'UTC' }
                 ));
 
               return (

@@ -117,7 +117,7 @@ export function HolidayDetail({ countrySlug, holidaySlug, locale }: HolidayDetai
         text: item.answer[locale]
           .replace(/\{year\}/g, String(year))
           .replace(/\{date\}/g, formatDate(date, locale))
-          .replace(/\{dayOfWeek\}/g, date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : locale === 'es' ? 'es-ES' : 'en-US', { weekday: 'long' })),
+          .replace(/\{dayOfWeek\}/g, date.toLocaleDateString(locale === 'fr' ? 'fr-FR' : locale === 'es' ? 'es-ES' : 'en-US', { weekday: 'long', timeZone: 'UTC' })),
       },
     })),
   };

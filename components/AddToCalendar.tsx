@@ -25,7 +25,7 @@ export default function AddToCalendar({ holiday, date, locale = 'en' }: AddToCal
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${holiday.slugs[locale]}-${date.getFullYear()}.ics`;
+    link.download = `${holiday.slugs[locale]}-${date.getUTCFullYear()}.ics`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -36,8 +36,8 @@ export default function AddToCalendar({ holiday, date, locale = 'en' }: AddToCal
     const name = holiday.names[locale];
     const localeCode = locale === 'fr' ? 'fr-FR' : locale === 'es' ? 'es-ES' : 'en-US';
     const shareData = {
-      title: `${name} ${date.getFullYear()}`,
-      text: `${name} is on ${date.toLocaleDateString(localeCode, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}!`,
+      title: `${name} ${date.getUTCFullYear()}`,
+      text: `${name} is on ${date.toLocaleDateString(localeCode, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}!`,
       url: window.location.href,
     };
 
