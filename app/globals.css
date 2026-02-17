@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Prevent iOS auto-zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Prevent 300ms tap delay */
+  html {
+    touch-action: manipulation;
+  }
+
+  /* Safe area insets for notched devices */
+  body {
+    padding-env: safe-area-inset-top safe-area-inset-right safe-area-inset-bottom safe-area-inset-left;
+  }
+
+  /* Use dynamic viewport height for mobile */
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  /* Ad container dimension reservations */
+  .ad-leaderboard {
+    min-height: 50px;
+    max-width: 320px;
+  }
+
+  @media (min-width: 640px) {
+    .ad-leaderboard {
+      min-height: 90px;
+      max-width: 728px;
+    }
+  }
+
+  .ad-rectangle {
+    min-height: 250px;
+    max-width: 300px;
+  }
+
+  .ad-anchor {
+    min-height: 50px;
+    max-width: 320px;
+  }
+
+  @media (min-width: 640px) {
+    .ad-anchor {
+      min-height: 250px;
+      max-width: 300px;
+    }
+  }
+
+  /* Countdown timer digit animation */
+  .countdown-digit {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Print styles */
+@media print {
+  header, footer, nav,
+  .ad-leaderboard, .ad-rectangle, .ad-anchor,
+  [data-ad-unit], .no-print {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
