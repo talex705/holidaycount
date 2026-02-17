@@ -22,6 +22,40 @@ import ghHolidays from './ghana';
 import keHolidays from './kenya';
 import ugHolidays from './uganda';
 import inHolidays from './india';
+// Batch 2: Western Europe
+import frHolidays from './france';
+import beHolidays from './belgium';
+import chHolidays from './switzerland';
+import esHolidays from './spain';
+// Batch 3: Mexico + Central America
+import mxHolidays from './mexico';
+import gtHolidays from './guatemala';
+import hnHolidays from './honduras';
+import svHolidays from './el-salvador';
+import niHolidays from './nicaragua';
+import crHolidays from './costa-rica';
+import paHolidays from './panama';
+// Batch 4: Caribbean
+import htHolidays from './haiti';
+import cuHolidays from './cuba';
+import doHolidays from './dominican-republic';
+import prHolidays from './puerto-rico';
+// Batch 5: South America
+import arHolidays from './argentina';
+import coHolidays from './colombia';
+import peHolidays from './peru';
+import clHolidays from './chile';
+import veHolidays from './venezuela';
+import ecHolidays from './ecuador';
+import boHolidays from './bolivia';
+import pyHolidays from './paraguay';
+import uyHolidays from './uruguay';
+// Batch 6: Africa
+import snHolidays from './senegal';
+import ciHolidays from './cote-divoire';
+import cmHolidays from './cameroon';
+import cdHolidays from './dr-congo';
+import mgHolidays from './madagascar';
 
 // ---------------------------------------------------------------------------
 // Master holiday list
@@ -45,6 +79,40 @@ const ALL_HOLIDAYS: HolidayData[] = [
   ...keHolidays,
   ...ugHolidays,
   ...inHolidays,
+  // Batch 2: Western Europe
+  ...frHolidays,
+  ...beHolidays,
+  ...chHolidays,
+  ...esHolidays,
+  // Batch 3: Mexico + Central America
+  ...mxHolidays,
+  ...gtHolidays,
+  ...hnHolidays,
+  ...svHolidays,
+  ...niHolidays,
+  ...crHolidays,
+  ...paHolidays,
+  // Batch 4: Caribbean
+  ...htHolidays,
+  ...cuHolidays,
+  ...doHolidays,
+  ...prHolidays,
+  // Batch 5: South America
+  ...arHolidays,
+  ...coHolidays,
+  ...peHolidays,
+  ...clHolidays,
+  ...veHolidays,
+  ...ecHolidays,
+  ...boHolidays,
+  ...pyHolidays,
+  ...uyHolidays,
+  // Batch 6: Africa
+  ...snHolidays,
+  ...ciHolidays,
+  ...cmHolidays,
+  ...cdHolidays,
+  ...mgHolidays,
 ];
 
 export default ALL_HOLIDAYS;
