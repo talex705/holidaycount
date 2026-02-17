@@ -107,6 +107,20 @@ const fr: Dictionary = {
   // Country overview
   'country.overview': 'Calendrier des fêtes en {country}',
   'country.overviewDescription': 'Comptes à rebours pour tous les jours fériés en {country}. Dates, traditions et conseils de préparation.',
+
+  // Deals
+  'deals.navLabel': 'Offres',
+  'deals.sectionTitle': 'Meilleures offres pour {holiday}',
+  'deals.viewDeal': 'Voir l\'offre',
+  'deals.allCategories': 'Toutes',
+  'deals.comingSoon': 'Recommandations à venir.',
+  'deals.daysUntil': '{days}j',
+  'deals.disclosure': 'Nous pouvons percevoir une commission sur les achats effectués via les liens de cette page. Cela n\'affecte ni nos recommandations ni le prix que vous payez.',
+  'deals.disclosurePageTitle': 'Divulgation d\'affiliation',
+  'deals.disclosurePageDescription': 'Découvrez comment HolidayCount génère des revenus grâce à des partenariats d\'affiliation.',
+
+  // Affiliate Disclosure page
+  'nav.affiliateDisclosure': 'Divulgation d\'affiliation',
 };
 
 export default fr;

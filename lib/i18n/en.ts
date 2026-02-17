@@ -104,6 +104,20 @@ const en = {
   // Country overview
   'country.overview': '{country} Holiday Calendar',
   'country.overviewDescription': 'Countdown timers for all public holidays in {country}. See dates, traditions, and plan ahead.',
+
+  // Deals
+  'deals.navLabel': 'Deals',
+  'deals.sectionTitle': 'Top Deals for {holiday}',
+  'deals.viewDeal': 'View Deal',
+  'deals.allCategories': 'All',
+  'deals.comingSoon': 'Deal recommendations coming soon.',
+  'deals.daysUntil': '{days}d',
+  'deals.disclosure': 'We may earn a commission from purchases made through links on this page. This doesn\'t affect our recommendations or the price you pay.',
+  'deals.disclosurePageTitle': 'Affiliate Disclosure',
+  'deals.disclosurePageDescription': 'Learn about how HolidayCount earns revenue through affiliate partnerships.',
+
+  // Affiliate Disclosure page
+  'nav.affiliateDisclosure': 'Affiliate Disclosure',
 };
 
 export type DictionaryKey = keyof typeof en;

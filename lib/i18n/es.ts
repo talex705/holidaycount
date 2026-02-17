@@ -107,6 +107,20 @@ const es: Dictionary = {
   // Country overview
   'country.overview': 'Calendario de fiestas en {country}',
   'country.overviewDescription': 'Cuentas regresivas para todos los feriados en {country}. Fechas, tradiciones y consejos de preparación.',
+
+  // Deals
+  'deals.navLabel': 'Ofertas',
+  'deals.sectionTitle': 'Mejores ofertas para {holiday}',
+  'deals.viewDeal': 'Ver oferta',
+  'deals.allCategories': 'Todas',
+  'deals.comingSoon': 'Recomendaciones próximamente.',
+  'deals.daysUntil': '{days}d',
+  'deals.disclosure': 'Podemos recibir una comisión por compras realizadas a través de los enlaces de esta página. Esto no afecta nuestras recomendaciones ni el precio que pagas.',
+  'deals.disclosurePageTitle': 'Divulgación de afiliados',
+  'deals.disclosurePageDescription': 'Conoce cómo HolidayCount genera ingresos a través de asociaciones de afiliados.',
+
+  // Affiliate Disclosure page
+  'nav.affiliateDisclosure': 'Divulgación de afiliados',
 };
 
 export default es;
