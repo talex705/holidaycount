@@ -50,63 +50,52 @@ export async function GET(request: NextRequest) {
   const anthropic = new Anthropic({ apiKey });
   const categoryList = DEAL_CATEGORIES.map((c) => `${c.id}: ${c.name.en}`).join(', ');
 
-  const prompt = `You are a deal researcher for a holiday website. Research the top 10 best deals/products/services for the holiday "${targetHoliday.holiday.names.en}" in ${targetCountry.names.en}.
+  const prompt = `Research 2 deals per category for "${targetHoliday.holiday.names.en}" in ${targetCountry.names.en}. Categories: ${categoryList}
 
-For EACH of these 7 categories: ${categoryList}
+Return ONLY valid JSON (no markdown, no code blocks, no explanation). Use this exact structure:
+{"holidayId":"${targetHoliday.holiday.id}","lastUpdated":"${new Date().toISOString()}","categories":[{"id":"gifts","name":{"en":"Gifts","fr":"Cadeaux","es":"Regalos"},"deals":[{"rank":1,"title":{"en":"...","fr":"...","es":"..."},"editorial":{"en":"...","fr":"...","es":"..."},"imageUrl":"","price":"$49.99","merchant":"Amazon","merchantUrl":"https://amazon.com/example","category":"gifts","tags":["under-50"]}]}]}
 
-Find 10 real, currently available products or services from reputable merchants. For each deal, provide:
-- title (in English, French, and Spanish)
-- editorial (1-2 sentence explanation of why this is a great pick, in all 3 languages)
-- imageUrl (a real product image URL if available, or empty string)
-- price (e.g., "$49.99" or "From $25" in the country's local currency)
-- merchant (company name)
-- merchantUrl (real URL to the product page)
-- category (one of: gifts, travel, experiences, food, decor, apparel, digital)
-- tags (array of strings like "under-50", "for-kids", "last-minute", "best-seller")
-
-Return ONLY valid JSON matching this exact structure:
-{
-  "holidayId": "${targetHoliday.holiday.id}",
-  "lastUpdated": "${new Date().toISOString()}",
-  "categories": [
-    {
-      "id": "gifts",
-      "name": { "en": "Gifts", "fr": "Cadeaux", "es": "Regalos" },
-      "deals": [
-        {
-          "rank": 1,
-          "title": { "en": "...", "fr": "...", "es": "..." },
-          "editorial": { "en": "...", "fr": "...", "es": "..." },
-          "imageUrl": "",
-          "price": "$49.99",
-          "merchant": "Amazon",
-          "merchantUrl": "https://...",
-          "category": "gifts",
-          "tags": ["under-50", "best-seller"]
-        }
-      ]
-    }
-  ]
-}
-
-Focus on real merchants and realistic prices for ${targetCountry.names.en}. If a category doesn't apply well to this holiday, include fewer items or leave the deals array empty.`;
+Rules:
+- 2 deals per category, 7 categories total
+- All text fields must have en, fr, es translations
+- Use real merchant names and realistic prices
+- merchantUrl must be a valid URL
+- Keep editorial to 1 short sentence per language
+- Escape special characters in JSON strings properly
+- Do NOT wrap in markdown code blocks`;
 
   try {
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-5-20250929',
+      model: 'claude-haiku-4-5-20251001',
       max_tokens: 8000,
       messages: [{ role: 'user', content: prompt }],
     });
 
     const text = response.content[0].type === 'text' ? response.content[0].text : '';
 
-    // Extract JSON from response (handle markdown code blocks)
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return NextResponse.json({ error: 'No valid JSON in response' }, { status: 500 });
+    // Extract JSON from response — strip markdown code blocks if present
+    let jsonStr = text.trim();
+    if (jsonStr.startsWith('```')) {
+      jsonStr = jsonStr.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, '');
     }
+    // Find the outermost JSON object
+    const start = jsonStr.indexOf('{');
+    const end = jsonStr.lastIndexOf('}');
+    if (start === -1 || end === -1) {
+      return NextResponse.json({ error: 'No valid JSON in response', preview: text.substring(0, 200) }, { status: 500 });
+    }
+    jsonStr = jsonStr.substring(start, end + 1);
 
-    const dealFile: DealFile = JSON.parse(jsonMatch[0]);
+    let dealFile: DealFile;
+    try {
+      dealFile = JSON.parse(jsonStr);
+    } catch (parseErr) {
+      return NextResponse.json({
+        error: 'JSON parse failed',
+        detail: parseErr instanceof Error ? parseErr.message : String(parseErr),
+        preview: jsonStr.substring(0, 300),
+      }, { status: 500 });
+    }
 
     // Validate structure
     if (!dealFile.holidayId || !dealFile.categories || !Array.isArray(dealFile.categories)) {
@@ -125,8 +114,9 @@ Focus on real merchants and realistic prices for ${targetCountry.names.en}. If a
       totalDeals: dealFile.categories.reduce((sum, c) => sum + c.deals.length, 0),
     });
   } catch (error) {
-    console.error('Agent error:', error);
-    return NextResponse.json({ error: 'Agent execution failed' }, { status: 500 });
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('Agent error:', message);
+    return NextResponse.json({ error: 'Agent execution failed', detail: message }, { status: 500 });
   }
 }
 
