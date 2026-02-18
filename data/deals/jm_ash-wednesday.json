@@ -1,0 +1,384 @@
+{
+  "holidayId": "jm_ash-wednesday",
+  "lastUpdated": "2026-02-18T00:16:37.284Z",
+  "categories": [
+    {
+      "id": "gifts",
+      "name": {
+        "en": "Gifts",
+        "fr": "Cadeaux",
+        "es": "Regalos"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Meditation Prayer Beads Set",
+            "fr": "Ensemble de Perles de Prière",
+            "es": "Conjunto de Cuentas de Oración"
+          },
+          "editorial": {
+            "en": "Beautiful handcrafted prayer beads perfect for Lenten reflection.",
+            "fr": "De magnifiques perles de prière faites à la main parfaites pour la réflexion du Carême.",
+            "es": "Hermosas cuentas de oración hechas a mano perfectas para la reflexión cuaresmal."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400",
+          "price": "$35.99",
+          "merchant": "Etsy",
+          "merchantUrl": "https://www.etsy.com/search?q=prayer+beads",
+          "category": "gifts",
+          "tags": [
+            "spiritual",
+            "under-50"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Religious Coffee Table Book",
+            "fr": "Livre de Table Basse Religieux",
+            "es": "Libro de Mesa de Centro Religioso"
+          },
+          "editorial": {
+            "en": "Inspiring photographic journey through sacred traditions and spiritual practices.",
+            "fr": "Un voyage photographique inspirant à travers les traditions sacrées et les pratiques spirituelles.",
+            "es": "Un viaje fotográfico inspirador a través de tradiciones sagradas y prácticas espirituales."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-150784272343-583f20270319?w=400",
+          "price": "$42.50",
+          "merchant": "Barnes & Noble",
+          "merchantUrl": "https://www.barnesandnoble.com/b/books/religion",
+          "category": "gifts",
+          "tags": [
+            "inspirational",
+            "under-50"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "name": {
+        "en": "Travel",
+        "fr": "Voyage",
+        "es": "Viaje"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Montego Bay Spiritual Retreat Weekend",
+            "fr": "Week-end de Retraite Spirituelle de Montego Bay",
+            "es": "Fin de Semana de Retiro Espiritual en Montego Bay"
+          },
+          "editorial": {
+            "en": "Three-day guided spiritual retreat with beachfront accommodations and daily meditation sessions.",
+            "fr": "Retraite spirituelle guidée de trois jours avec hébergement en bord de plage et séances de méditation quotidiennes.",
+            "es": "Retiro espiritual guiado de tres días con alojamiento frente a la playa y sesiones diarias de meditación."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+          "price": "$599.00",
+          "merchant": "Airbnb Experiences",
+          "merchantUrl": "https://www.airbnb.com/experiences/jamaica",
+          "category": "travel",
+          "tags": [
+            "jamaica",
+            "spiritual"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Kingston Historical Walking Tour",
+            "fr": "Visite Historique à Pied de Kingston",
+            "es": "Tour a Pie Histórico de Kingston"
+          },
+          "editorial": {
+            "en": "Guided exploration of Kingston's colonial history and spiritual landmarks during Lent.",
+            "fr": "Exploration guidée de l'histoire coloniale et des sites spirituels de Kingston pendant le Carême.",
+            "es": "Exploración guiada de la historia colonial y lugares espirituales de Kingston durante la Cuaresma."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
+          "price": "$45.00",
+          "merchant": "Viator",
+          "merchantUrl": "https://www.viator.com/tours/Kingston-Jamaica",
+          "category": "travel",
+          "tags": [
+            "jamaica",
+            "guided-tour"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "experiences",
+      "name": {
+        "en": "Experiences",
+        "fr": "Expériences",
+        "es": "Experiencias"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Ash Wednesday Service & Brunch Package",
+            "fr": "Forfait Service du Mercredi des Cendres et Brunch",
+            "es": "Paquete de Servicio del Miércoles de Ceniza y Brunch"
+          },
+          "editorial": {
+            "en": "Attend traditional Ash Wednesday service followed by fellowship brunch with local community.",
+            "fr": "Assistez au service traditionnel du Mercredi des Cendres suivi d'un brunch en compagnie de la communauté locale.",
+            "es": "Asista al servicio tradicional del Miércoles de Ceniza seguido de brunch comunitario."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=400",
+          "price": "$65.00",
+          "merchant": "Jamaica Tourism Board",
+          "merchantUrl": "https://www.visitjamaica.com/experiences",
+          "category": "experiences",
+          "tags": [
+            "spiritual",
+            "jamaica"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Fasting & Wellness Retreat Day",
+            "fr": "Journée de Retraite du Jeûne et du Bien-être",
+            "es": "Día de Retiro de Ayuno y Bienestar"
+          },
+          "editorial": {
+            "en": "Full-day wellness program combining yoga, healthy meals, and spiritual guidance for Lenten season.",
+            "fr": "Programme de bien-être d'une journée combinant le yoga, les repas sains et l'orientation spirituelle pour la saison du Carême.",
+            "es": "Programa de bienestar de día completo que combina yoga, comidas saludables y orientación espiritual para la temporada de Cuaresma."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400",
+          "price": "$89.99",
+          "merchant": "Wellness Jamaica",
+          "merchantUrl": "https://www.wellnessjamaica.com/retreats",
+          "category": "experiences",
+          "tags": [
+            "wellness",
+            "fasting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": {
+        "en": "Food & Dining",
+        "fr": "Nourriture et Restauration",
+        "es": "Comida y Restauración"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Jamaican Fish & Seafood Bundle",
+            "fr": "Paquet de Poisson et Fruits de Mer Jamaïcains",
+            "es": "Paquete de Pescado y Mariscos Jamaicanos"
+          },
+          "editorial": {
+            "en": "Sustainably sourced Jamaican seafood selection perfect for meatless Lenten meals.",
+            "fr": "Sélection de fruits de mer jamaïcains d'origine durable parfaite pour les repas du Carême sans viande.",
+            "es": "Selección de mariscos jamaicanos de origen sostenible perfecta para comidas cuaresmales sin carne."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
+          "price": "$54.99",
+          "merchant": "FreshDirect",
+          "merchantUrl": "https://www.freshdirect.com/search?q=jamaican+seafood",
+          "category": "food",
+          "tags": [
+            "seafood",
+            "meatless"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Jamaican Vegetarian Cooking Class",
+            "fr": "Cours de Cuisine Végétarienne Jamaïcaine",
+            "es": "Clase de Cocina Vegetariana Jamaicana"
+          },
+          "editorial": {
+            "en": "Learn to prepare traditional Jamaican vegetarian dishes ideal for Lenten fasting practices.",
+            "fr": "Apprenez à préparer des plats végétariens jamaïcains traditionnels idéaux pour les pratiques de jeûne du Carême.",
+            "es": "Aprenda a preparar platos vegetarianos jamaicanos tradicionales ideales para prácticas de ayuno cuaresmal."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+          "price": "$79.00",
+          "merchant": "Udemy",
+          "merchantUrl": "https://www.udemy.com/course/jamaican-vegetarian-cooking",
+          "category": "food",
+          "tags": [
+            "cooking-class",
+            "vegetarian"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decor",
+      "name": {
+        "en": "Décor",
+        "fr": "Décor",
+        "es": "Decoración"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Ash Wednesday Altar Candle Set",
+            "fr": "Ensemble de Bougies d'Autel du Mercredi des Cendres",
+            "es": "Conjunto de Velas de Altar del Miércoles de Ceniza"
+          },
+          "editorial": {
+            "en": "Hand-poured soy candles in liturgical colors for meaningful Ash Wednesday home altars.",
+            "fr": "Bougies de soja coulées à la main dans les couleurs liturgiques pour les autels domestiques significatifs du Mercredi des Cendres.",
+            "es": "Velas de soja vertidas a mano en colores litúrgicos para altares caseros significativos del Miércoles de Ceniza."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1602191953-236ede2da37d?w=400",
+          "price": "$38.99",
+          "merchant": "Anthropologie",
+          "merchantUrl": "https://www.anthropologie.com/home-decor/candles",
+          "category": "decor",
+          "tags": [
+            "candles",
+            "spiritual"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Lent Wall Tapestry",
+            "fr": "Tapisserie Murale du Carême",
+            "es": "Tapiz de Pared de Cuaresma"
+          },
+          "editorial": {
+            "en": "Beautiful fabric wall hanging featuring sacred symbols and Lenten themes for home reflection space.",
+            "fr": "Magnifique suspension en tissu présentant des symboles sacrés et des thèmes du Carême pour un espace de réflexion à domicile.",
+            "es": "Hermoso colgante de tela con símbolos sagrados y temas cuaresmales para el espacio de reflexión en el hogar."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1578926078328-123f5474f1cb?w=400",
+          "price": "$52.50",
+          "merchant": "Urban Outfitters",
+          "merchantUrl": "https://www.urbanoutfitters.com/home-decor/tapestries",
+          "category": "decor",
+          "tags": [
+            "spiritual",
+            "wall-art"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apparel",
+      "name": {
+        "en": "Apparel",
+        "fr": "Vêtements",
+        "es": "Ropa"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Modest Linen Lenten Dress",
+            "fr": "Robe Linéenne Modeste du Carême",
+            "es": "Vestido Modesto de Lino de Cuaresma"
+          },
+          "editorial": {
+            "en": "Elegant, modest linen dress in earthy tones perfect for Ash Wednesday services and reflective events.",
+            "fr": "Robe élégante et modeste en lin dans des tons naturels parfaite pour les services du Mercredi des Cendres et les événements réfléchis.",
+            "es": "Elegante y modesto vestido de lino en tonos tierra perfecto para servicios del Miércoles de Ceniza y eventos reflexivos."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1595777707802-221b42a80b03?w=400",
+          "price": "$68.00",
+          "merchant": "J.Crew",
+          "merchantUrl": "https://www.jcrew.com/womens/categories/dresses",
+          "category": "apparel",
+          "tags": [
+            "modest",
+            "linen"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Ash Wednesday Unisex T-Shirt",
+            "fr": "T-shirt Unisexe du Mercredi des Cendres",
+            "es": "Camiseta Unisex del Miércoles de Ceniza"
+          },
+          "editorial": {
+            "en": "Comfortable organic cotton tee with meaningful Lenten message in neutral color palette.",
+            "fr": "T-shirt confortable en coton biologique avec un message significatif du Carême dans une palette de couleurs neutres.",
+            "es": "Camiseta cómoda de algodón orgánico con un mensaje significativo de Cuaresma en paleta de colores neutrales."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400",
+          "price": "$32.00",
+          "merchant": "ASOS",
+          "merchantUrl": "https://www.asos.com/search/?q=lenten",
+          "category": "apparel",
+          "tags": [
+            "organic",
+            "unisex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "name": {
+        "en": "Digital Products",
+        "fr": "Produits Numériques",
+        "es": "Productos Digitales"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "40-Day Lent Daily Devotional App",
+            "fr": "Application de Dévotion Quotidienne du Carême de 40 Jours",
+            "es": "Aplicación de Devoción Diaria de Cuaresma de 40 Días"
+          },
+          "editorial": {
+            "en": "Interactive app with daily reflections, prayers, and scripture readings for the entire Lenten season.",
+            "fr": "Application interactive avec des réflexions quotidiennes, des prières et des lectures bibliques pour toute la saison du Carême.",
+            "es": "Aplicación interactiva con reflexiones diarias, oraciones y lecturas bíblicas para toda la temporada de Cuaresma."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1484807352052-23338112c498?w=400",
+          "price": "$4.99",
+          "merchant": "Apple App Store",
+          "merchantUrl": "https://apps.apple.com/us/app/lent-daily-devotional/id123456789",
+          "category": "digital",
+          "tags": [
+            "app",
+            "devotional"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Jamaican Spiritual Music Playlist Bundle",
+            "fr": "Forfait Playlist de Musique Spirituelle Jamaïcaine",
+            "es": "Paquete de Playlist de Música Espiritual Jamaicana"
+          },
+          "editorial": {
+            "en": "Curated digital playlist of traditional Jamaican hymns and spiritual music for Lenten meditation.",
+            "fr": "Playlist numérique organisée d'hymnes jamaïcains traditionnels et de musique spirituelle pour la méditation du Carême.",
+            "es": "Playlist digital curada de himnos jamaicanos tradicionales y música espiritual para la meditación cuaresmal."
+          },
+          "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400",
+          "price": "$9.99",
+          "merchant": "Spotify",
+          "merchantUrl": "https://open.spotify.com/search/jamaican%20spiritual%20music",
+          "category": "digital",
+          "tags": [
+            "music",
+            "jamaican"
+          ]
+        }
+      ]
+    }
+  ]
+}
