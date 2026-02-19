@@ -1,0 +1,383 @@
+{
+  "holidayId": "do_independence-day",
+  "lastUpdated": "2026-02-19T08:48:27.352Z",
+  "categories": [
+    {
+      "id": "gifts",
+      "name": {
+        "en": "Gifts",
+        "fr": "Cadeaux",
+        "es": "Regalos"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Dominican Flag Ceramic Mug Set",
+            "fr": "Ensemble de Tasses en Céramique au Drapeau Dominicain",
+            "es": "Juego de Tazas de Cerámica con Bandera Dominicana"
+          },
+          "editorial": {
+            "en": "Celebrate with authentic Dominican flag-themed ceramic mugs perfect for daily use.",
+            "fr": "Célébrez avec des tasses en céramique authentiques aux couleurs du drapeau dominicain.",
+            "es": "Celebra con tazas de cerámica auténticas con los colores de la bandera dominicana."
+          },
+          "imageUrl": "https://example.com/mug-set.jpg",
+          "price": "$24.99",
+          "merchant": "Amazon",
+          "merchantUrl": "https://amazon.com/dominican-flag-mug",
+          "category": "gifts",
+          "tags": [
+            "under-50",
+            "home"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Dominican Independence Day Coffee Table Book",
+            "fr": "Livre de Table Basse sur l'Indépendance Dominicaine",
+            "es": "Libro de Mesa de Centro sobre la Independencia Dominicana"
+          },
+          "editorial": {
+            "en": "A beautifully illustrated book showcasing Dominican history and cultural heritage.",
+            "fr": "Un livre magnifiquement illustré présentant l'histoire et le patrimoine culturel dominicain.",
+            "es": "Un libro bellamente ilustrado que muestra la historia y el patrimonio cultural dominicano."
+          },
+          "imageUrl": "https://example.com/book-dominican.jpg",
+          "price": "$45.00",
+          "merchant": "Barnes & Noble",
+          "merchantUrl": "https://barnesandnoble.com/dominican-book",
+          "category": "gifts",
+          "tags": [
+            "under-50",
+            "history"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "name": {
+        "en": "Travel",
+        "fr": "Voyage",
+        "es": "Viajes"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Santo Domingo Historical Tour Package",
+            "fr": "Forfait Visite Historique de Saint-Domingue",
+            "es": "Paquete de Tour Histórico de Santo Domingo"
+          },
+          "editorial": {
+            "en": "Explore iconic Independence Day landmarks and colonial architecture in the capital.",
+            "fr": "Explorez les monuments emblématiques de la fête de l'indépendance et l'architecture coloniale.",
+            "es": "Explora los monumentos icónicos del Día de la Independencia y la arquitectura colonial."
+          },
+          "imageUrl": "https://example.com/santo-domingo-tour.jpg",
+          "price": "$189.99",
+          "merchant": "Viator",
+          "merchantUrl": "https://viator.com/santo-domingo-tour",
+          "category": "travel",
+          "tags": [
+            "cultural-tour"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Punta Cana Beach Resort Independence Weekend",
+            "fr": "Forfait Villégiature de Plage Punta Cana",
+            "es": "Paquete Resort de Playa Punta Cana"
+          },
+          "editorial": {
+            "en": "All-inclusive beach resort getaway with Independence Day celebrations and festivities.",
+            "fr": "Forfait tout compris en station balnéaire avec célébrations du jour de l'indépendance.",
+            "es": "Paquete todo incluido en resort de playa con celebraciones del Día de la Independencia."
+          },
+          "imageUrl": "https://example.com/punta-cana-resort.jpg",
+          "price": "$599.99",
+          "merchant": "Booking.com",
+          "merchantUrl": "https://booking.com/punta-cana-independence",
+          "category": "travel",
+          "tags": [
+            "all-inclusive",
+            "resort"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "experiences",
+      "name": {
+        "en": "Experiences",
+        "fr": "Expériences",
+        "es": "Experiencias"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Dominican Independence Day Carnival Tickets",
+            "fr": "Billets de Carnaval du Jour de l'Indépendance Dominicain",
+            "es": "Entradas al Carnaval del Día de la Independencia Dominicana"
+          },
+          "editorial": {
+            "en": "Front-row access to vibrant parades, music, and cultural performances celebrating Dominican independence.",
+            "fr": "Accès au premier rang aux défilés, musique et spectacles culturels célébrant l'indépendance dominicaine.",
+            "es": "Acceso en primera fila a desfiles vibrantes, música y actuaciones culturales que celebran la independencia dominicana."
+          },
+          "imageUrl": "https://example.com/carnival-tickets.jpg",
+          "price": "$79.99",
+          "merchant": "Ticketmaster",
+          "merchantUrl": "https://ticketmaster.com/dominican-carnival",
+          "category": "experiences",
+          "tags": [
+            "events",
+            "cultural"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Traditional Merengue Dance Class",
+            "fr": "Cours de Danse Merengué Traditionnel",
+            "es": "Clase de Baile Merengue Tradicional"
+          },
+          "editorial": {
+            "en": "Learn authentic merengue dancing from professional instructors during Independence Day celebrations.",
+            "fr": "Apprenez la danse merengué authentique auprès d'instructeurs professionnels lors des célébrations de l'indépendance.",
+            "es": "Aprende baile merengue auténtico de instructores profesionales durante las celebraciones del Día de la Independencia."
+          },
+          "imageUrl": "https://example.com/merengue-class.jpg",
+          "price": "$45.00",
+          "merchant": "Airbnb Experiences",
+          "merchantUrl": "https://airbnb.com/experiences/merengue-dance",
+          "category": "experiences",
+          "tags": [
+            "cultural",
+            "dance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": {
+        "en": "Food & Dining",
+        "fr": "Nourriture et Restauration",
+        "es": "Comida y Cena"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Traditional Dominican Independence Day Feast Catering",
+            "fr": "Restauration de Festin Traditionnel de l'Indépendance Dominicaine",
+            "es": "Catering de Festín Tradicional del Día de la Independencia Dominicana"
+          },
+          "editorial": {
+            "en": "Complete catering service featuring sancocho, mangu, and other authentic Dominican specialties.",
+            "fr": "Service de restauration complet proposant sancocho, mangu et autres spécialités dominicaines authentiques.",
+            "es": "Servicio de catering completo con sancocho, mangu y otras especialidades dominicanas auténticas."
+          },
+          "imageUrl": "https://example.com/dominican-catering.jpg",
+          "price": "$249.99",
+          "merchant": "Local Chef Services",
+          "merchantUrl": "https://localchefservices.com/dominican-catering",
+          "category": "food",
+          "tags": [
+            "catering",
+            "authentic"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Dominican Rum & Cigar Tasting Experience",
+            "fr": "Expérience de Dégustation de Rhum et Cigare Dominicain",
+            "es": "Experiencia de Degustación de Ron y Cigarro Dominicano"
+          },
+          "editorial": {
+            "en": "Premium tasting experience celebrating Dominican excellence in rum and cigar production.",
+            "fr": "Expérience de dégustation haut de gamme célébrant l'excellence dominicaine en rhum et cigares.",
+            "es": "Experiencia de degustación premium celebrando la excelencia dominicana en rum y cigarros."
+          },
+          "imageUrl": "https://example.com/rum-cigar-tasting.jpg",
+          "price": "$89.99",
+          "merchant": "Casa Crespo",
+          "merchantUrl": "https://casacrespo.com/tasting-experience",
+          "category": "food",
+          "tags": [
+            "premium",
+            "tasting"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decor",
+      "name": {
+        "en": "Décor",
+        "fr": "Décoration",
+        "es": "Decoración"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Dominican Flag Bunting & Banner Set",
+            "fr": "Ensemble de Banderoles et Drapeaux Dominicains",
+            "es": "Juego de Banderines y Banderas Dominicanas"
+          },
+          "editorial": {
+            "en": "Complete decoration set with flags, bunting, and banners for authentic Independence Day ambiance.",
+            "fr": "Ensemble de décoration complet avec drapeaux et banderoles pour une ambiance authentique du jour de l'indépendance.",
+            "es": "Juego de decoración completo con banderas y banderines para una atmósfera auténtica del Día de la Independencia."
+          },
+          "imageUrl": "https://example.com/flag-bunting.jpg",
+          "price": "$34.99",
+          "merchant": "Party City",
+          "merchantUrl": "https://partycity.com/dominican-bunting",
+          "category": "decor",
+          "tags": [
+            "under-50",
+            "outdoor"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Trinitario Flower Independence Day Centerpiece Kit",
+            "fr": "Kit de Pièce Maîtresse Fleurs Trinitaires",
+            "es": "Kit de Arreglo Central de Flores Trinitarias"
+          },
+          "editorial": {
+            "en": "Beautiful floral arrangement kit featuring Dominican national flower trinitario blooms.",
+            "fr": "Kit d'arrangement floral magnifique présentant les fleurs nationales dominicaines trinitaires.",
+            "es": "Kit de arreglo floral hermoso con flores nacionales dominicanas trinitarias."
+          },
+          "imageUrl": "https://example.com/flower-centerpiece.jpg",
+          "price": "$59.99",
+          "merchant": "FTD Flowers",
+          "merchantUrl": "https://ftd.com/dominican-centerpiece",
+          "category": "decor",
+          "tags": [
+            "floral",
+            "centerpiece"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apparel",
+      "name": {
+        "en": "Apparel",
+        "fr": "Vêtements",
+        "es": "Ropa"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Dominican Independence Day T-Shirt Collection",
+            "fr": "Collection de T-shirt du Jour de l'Indépendance Dominicaine",
+            "es": "Colección de Camisetas del Día de la Independencia Dominicana"
+          },
+          "editorial": {
+            "en": "Stylish commemorative t-shirts with authentic Dominican cultural designs and flag colors.",
+            "fr": "T-shirts commémoratifs élégants aux designs culturels dominicains authentiques et couleurs du drapeau.",
+            "es": "Camisetas conmemorativas elegantes con diseños culturales dominicanos auténticos y colores de bandera."
+          },
+          "imageUrl": "https://example.com/tshirt-collection.jpg",
+          "price": "$29.99",
+          "merchant": "Etsy",
+          "merchantUrl": "https://etsy.com/dominican-tshirt",
+          "category": "apparel",
+          "tags": [
+            "under-50",
+            "cultural"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Traditional Dominican Guayabera Shirt",
+            "fr": "Chemise Guayabera Dominicaine Traditionnelle",
+            "es": "Camisa Guayabera Dominicana Tradicional"
+          },
+          "editorial": {
+            "en": "Authentic hand-stitched guayabera shirt perfect for Independence Day celebrations and festivities.",
+            "fr": "Chemise guayabera authentique cousue à la main parfaite pour les célébrations du jour de l'indépendance.",
+            "es": "Camisa guayabera auténtica cosida a mano perfecta para las celebraciones del Día de la Independencia."
+          },
+          "imageUrl": "https://example.com/guayabera-shirt.jpg",
+          "price": "$89.99",
+          "merchant": "Caribbean Threads",
+          "merchantUrl": "https://caribbealthreads.com/guayabera",
+          "category": "apparel",
+          "tags": [
+            "traditional",
+            "authentic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "name": {
+        "en": "Digital Products",
+        "fr": "Produits Numériques",
+        "es": "Productos Digitales"
+      },
+      "deals": [
+        {
+          "rank": 1,
+          "title": {
+            "en": "Dominican Independence Day Digital Photo Bundle",
+            "fr": "Forfait de Photos Numériques du Jour de l'Indépendance Dominicaine",
+            "es": "Paquete de Fotos Digitales del Día de la Independencia Dominicana"
+          },
+          "editorial": {
+            "en": "High-resolution digital photos of Dominican independence celebrations and cultural landmarks for personal use.",
+            "fr": "Photos numériques haute résolution des célébrations et monuments culturels dominicains pour usage personnel.",
+            "es": "Fotos digitales de alta resolución de celebraciones y monumentos culturales dominicanos para uso personal."
+          },
+          "imageUrl": "https://example.com/photo-bundle.jpg",
+          "price": "$19.99",
+          "merchant": "Shutterstock",
+          "merchantUrl": "https://shutterstock.com/dominican-independence",
+          "category": "digital",
+          "tags": [
+            "under-50",
+            "photos"
+          ]
+        },
+        {
+          "rank": 2,
+          "title": {
+            "en": "Dominican History E-Learning Course",
+            "fr": "Cours d'Apprentissage en Ligne sur l'Histoire Dominicaine",
+            "es": "Curso de Aprendizaje en Línea sobre Historia Dominicana"
+          },
+          "editorial": {
+            "en": "Comprehensive online course exploring Dominican independence history, culture, and heritage.",
+            "fr": "Cours en ligne complet explorant l'histoire, la culture et le patrimoine de l'indépendance dominicaine.",
+            "es": "Curso en línea completo que explora la historia, cultura y patrimonio de la independencia dominicana."
+          },
+          "imageUrl": "https://example.com/elearning-course.jpg",
+          "price": "$39.99",
+          "merchant": "Udemy",
+          "merchantUrl": "https://udemy.com/dominican-history",
+          "category": "digital",
+          "tags": [
+            "education",
+            "online"
+          ]
+        }
+      ]
+    }
+  ]
+}
